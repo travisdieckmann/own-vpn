@@ -1,0 +1,101 @@
+{
+  "Stuns": [
+    {
+      "Proto": "udp",
+      "URI": "stun:vpn.diecksystems.com:3478",
+      "Username": "",
+      "Password": ""
+    }
+  ],
+  "TURNConfig": {
+    "TimeBasedCredentials": false,
+    "CredentialsTTL": "0s",
+    "Secret": "",
+    "Turns": [
+      {
+        "Proto": "udp",
+        "URI": "turn:vpn.diecksystems.com:3478",
+        "Username": "self",
+        "Password": "84qeCh8JmJOWa5fS+H2RRtqySxTy4Dak7jtQD6m7EnE"
+      }
+    ]
+  },
+  "Relay": null,
+  "Signal": {
+    "Proto": "https",
+    "URI": "vpn.diecksystems.com:443",
+    "Username": "",
+    "Password": ""
+  },
+  "Datadir": "/var/lib/netbird/",
+  "DataStoreEncryptionKey": "wv2lUM0PnBPGjOafA/a3Qx6Da3POqafTwO2EYA5dVcY=",
+  "HttpConfig": {
+    "LetsEncryptDomain": "",
+    "CertFile": "",
+    "CertKey": "",
+    "AuthAudience": "288880074764124164@netbird",
+    "AuthIssuer": "https://vpn.diecksystems.com",
+    "AuthUserIDClaim": "",
+    "AuthKeysLocation": "https://vpn.diecksystems.com/oauth/v2/keys",
+    "OIDCConfigEndpoint": "https://vpn.diecksystems.com/.well-known/openid-configuration",
+    "IdpSignKeyRefreshEnabled": true,
+    "ExtraAuthAudience": ""
+  },
+  "IdpManagerConfig": {
+    "ManagerType": "zitadel",
+    "ClientConfig": {
+      "Issuer": "https://vpn.diecksystems.com",
+      "TokenEndpoint": "https://vpn.diecksystems.com/oauth/v2/token",
+      "ClientID": "netbird-service-account",
+      "ClientSecret": "TRCjFgBswAQrsAcgVzfmfQDDm7MX1eVO7lsh0EWA4eLoRHqxUtFP8lMTczfMgOPe",
+      "GrantType": "client_credentials"
+    },
+    "ExtraConfig": {
+      "ManagementEndpoint": "https://vpn.diecksystems.com/management/v1"
+    },
+    "Auth0ClientCredentials": null,
+    "AzureClientCredentials": null,
+    "KeycloakClientCredentials": null,
+    "ZitadelClientCredentials": null
+  },
+  "DeviceAuthorizationFlow": {
+    "Provider": "hosted",
+    "ProviderConfig": {
+      "ClientID": "288880076844498948@netbird",
+      "ClientSecret": "",
+      "Domain": "vpn.diecksystems.com",
+      "Audience": "288880076844498948@netbird",
+      "TokenEndpoint": "https://vpn.diecksystems.com/oauth/v2/token",
+      "DeviceAuthEndpoint": "https://vpn.diecksystems.com/oauth/v2/device_authorization",
+      "AuthorizationEndpoint": "",
+      "Scope": "openid",
+      "UseIDToken": false,
+      "RedirectURLs": null
+    }
+  },
+  "PKCEAuthorizationFlow": {
+    "ProviderConfig": {
+      "ClientID": "288880076844498948@netbird",
+      "ClientSecret": "",
+      "Domain": "",
+      "Audience": "288880076844498948@netbird",
+      "TokenEndpoint": "https://vpn.diecksystems.com/oauth/v2/token",
+      "DeviceAuthEndpoint": "",
+      "AuthorizationEndpoint": "https://vpn.diecksystems.com/oauth/v2/authorize",
+      "Scope": "openid profile email offline_access",
+      "UseIDToken": false,
+      "RedirectURLs": [
+        "http://localhost:53000/",
+        "http://localhost:54000/"
+      ]
+    }
+  },
+  "StoreConfig": {
+    "Engine": ""
+  },
+  "ReverseProxy": {
+    "TrustedHTTPProxies": null,
+    "TrustedHTTPProxiesCount": 0,
+    "TrustedPeers": null
+  }
+}
